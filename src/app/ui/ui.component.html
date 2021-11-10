@@ -1,0 +1,60 @@
+<mat-toolbar>
+    <mat-toolbar-row>
+        <span></span>
+        <button mat-icon-button [matMenuTriggerFor]="menu" mat-icon-button class="icon" aria-label="Icon-button menu ">
+            <mat-icon>menu</mat-icon>
+        </button>
+        <mat-menu #menu="matMenu">
+          <button mat-menu-item mat-menu-item [matMenuTriggerFor]="arithematics">
+            <mat-icon>calculate</mat-icon>
+            <span>Arithematic Operations</span>
+          </button>
+          <button mat-menu-item >
+            <mat-icon >looks_one</mat-icon>
+            <span>Check for Prime</span>
+          </button>
+          <button mat-menu-item>
+            <mat-icon>priority_high</mat-icon>
+            <span>Factorial</span>
+          </button>
+        </mat-menu>
+        <mat-menu #arithematics="matMenu">
+          <button mat-menu-item >
+            <mat-icon>add</mat-icon>
+            <span>Addition</span>
+          </button>
+          <button mat-menu-item >
+            <mat-icon >remove</mat-icon>
+            <span>Substract</span>
+          </button>
+          <button mat-menu-item>
+            <mat-icon>close</mat-icon>
+            <span>Multiplication</span>
+          </button>
+          <button mat-menu-item>
+            <mat-icon>/</mat-icon>
+            <span>Division</span>
+          </button>
+        </mat-menu>
+        <span></span>
+        <span class="spacer"></span>
+        <button mat-icon-button class="icon" aria-label="Icon-button heart">
+            <mat-icon>favorite</mat-icon>
+        </button>
+        <button mat-icon-button class="icon" aria-label="Icon-button share">
+            <mat-icon>share</mat-icon>
+        </button>
+    </mat-toolbar-row>
+</mat-toolbar>
+
+<mat-card class="card">
+    <mat-card-header>
+        <div mat-card-avatar class="header-image"></div>
+        <mat-card-title>Calculator</mat-card-title>
+        <mat-card-subtitle>Tool</mat-card-subtitle>
+    </mat-card-header >
+
+    <mat-card-content class="card">
+      <app-calc></app-calc>
+    </mat-card-content>
+</mat-card>
